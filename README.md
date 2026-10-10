@@ -72,7 +72,7 @@
       A scrolling strip shows every product's current price with its percentage change (▲ / ▼). It pauses on hover, and the header shows today's date in Bengali.
     </td>
     <td width="50%" valign="top">
-      <h3>🔺🔻 2. Today's Price Movers</h3>
+      <h3>🔺🔽 2. Today's Price Movers</h3>
       The home page highlights the <b>top 6 products that got more expensive</b> and the <b>top 6 that got cheaper</b>, followed by a grid of all products with Bengali digits.
     </td>
   </tr>
