@@ -1,31 +1,59 @@
+<div align="center">
+
 # 🛒 বাজার দর (BazarDor)
 
-প্রয়োজনীয় পণ্যের দৈনিক বাজারদর এক নজরে — চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম-দুধ ও মসলার দাম, দামের ওঠানামা এবং বাজারভিত্তিক বিস্তারিত তুলনা।
+**আজকের বাজারের দাম এক নজরে**
 
-## ✨ Features
-1. **Navbar + Live Price Ticker** — বাংলা তারিখসহ লোগো, active ক্যাটাগরি হাইলাইট, অসীম স্ক্রলিং দামের স্ট্রিপ (hover করলে pause)।
-2. **আজ দাম বেড়েছে ▲ / কমেছে ▼** — সবচেয়ে বেশি বাড়া ও কমা ৬টি করে পণ্য, সাথে "সব পণ্য" গ্রিড (বাংলা সংখ্যায়)।
-3. **ক্যাটাগরি পেজ + Sort** — ডিফল্ট / দাম কম→বেশি / বেশি→কম; বাংলা সংখ্যা parse করে numeric sort।
-4. **Protected Product Details** — লগইন ছাড়া ঢুকলে `/signin` এ redirect + toast; min / max / avg ও বাজারভিত্তিক টেবিল।
-5. **BetterAuth Authentication** — Email/Password, Google ও GitHub login, toast + inline error।
-6. **My Profile + Update Name** — আলাদা route (`/profile/update`) থেকে `updateUser` দিয়ে নাম পরিবর্তন।
-7. **Skeleton loaders, 404 পেজ ও fully responsive UI** — mobile / tablet / desktop।
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-05893e?style=for-the-badge&logo=vercel&logoColor=white)](https://bazar-dor-a7-five.vercel.app)
 
-## 🧰 Technologies
-Next.js (App Router) · React · TypeScript · Tailwind CSS v4 · Better Auth · MongoDB · react-hot-toast · Hind Siliguri font
+</div>
 
-## 🚀 Run locally
+---
+
+## 📖 Short Description
+
+**BazarDor (বাজার দর)** is a Bengali-language web app for checking the daily prices of everyday essentials such as rice, lentils, oil, vegetables, fish, meat, eggs, milk and spices. It shows which products got more expensive or cheaper today, lets you browse by category, and gives signed-in users a detailed price breakdown (minimum, maximum, average and market-wise prices).
+
+## 🧰 Technologies Used
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | Next.js (App Router) |
+| UI | React, Tailwind CSS v4 |
+| Language | TypeScript |
+| Authentication | Better Auth (Email/Password, Google, GitHub) |
+| Database | MongoDB Atlas |
+| Notifications | react-hot-toast |
+| Deployment | Vercel |
+
+## ✨ 5 Key Features
+
+1. **📈 Live Price Ticker**: A scrolling strip shows every product's price and percentage change. It pauses on hover, and the header shows today's date in Bengali.
+2. **🔺🔻 Today's Price Movers**: The home page highlights the top 6 products whose prices rose and the top 6 whose prices fell, followed by a grid of all products, with Bengali digits throughout.
+3. **🗂️ Category Browsing + Sorting**: Browse by category and sort by default, price low → high, or price high → low.
+4. **🔒 Protected Product Details**: Each product page shows min / max / average price and a market-wise price table. Signed-out visitors are redirected to the sign-in page.
+5. **🔐 Authentication & Profile**: Sign up and sign in with Email/Password, Google or GitHub. Users can view their profile and update their name.
+
+> Also included: skeleton loaders, a custom 404 page and a fully responsive layout.
+
+## 🚀 Getting Started
+
 ```bash
+git clone https://github.com/Suchanaaaaa/BazarDor-A7.git
+cd BazarDor-A7
 npm install
-cp .env.example .env.local   # fill in values
 npm run dev
 ```
 
-## 🔐 Environment variables
-`.env.example` দেখুন। OAuth callback URL: `{BETTER_AUTH_URL}/api/auth/callback/google` ও `/api/auth/callback/github`
+Create a `.env.local` file first:
 
-## ☁️ Deploy (Vercel)
-Repo import করে সব env variable বসান (`BETTER_AUTH_URL` ও `NEXT_PUBLIC_APP_URL` = live domain)। Dynamic route (`/category/[slug]`, `/product/[slug]`) refresh করলেও কাজ করে।
+```env
+MONGODB_URI="your-mongodb-connection-string"
+MONGODB_DB="bazardor"
+BETTER_AUTH_SECRET="a-long-random-secret"
+BETTER_AUTH_URL="http://localhost:3000"
+```
 
-## 🔌 API
-`https://api.api-store.workers.dev/api/bazardor` (fallback: `https://api.abcz.workers.dev/api/bazardor`) — `/categories`, `/categories/:id`, `/products`, `/products?category=`, `/products/:id`
+## 👩‍💻 Author
+
+Made by **Suchanaaaaa** · [GitHub](https://github.com/Suchanaaaaa)
