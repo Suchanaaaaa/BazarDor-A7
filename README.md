@@ -1,186 +1,126 @@
-<div align="center">
+# 🛒 বাজার দর | BazarDor
 
-# 🛒 বাজার দর · BazarDor
+### Bangladesh Daily Market Price Tracker
 
-### আজকের বাজারের দাম এক নজরে
-
-*Check today's market prices, spot price changes and compare markets, all in Bengali.*
-
-<br />
-
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-05893e?style=for-the-badge)](https://bazar-dor-a7-five.vercel.app)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Source_Code-181717?style=for-the-badge&logo=github)](https://github.com/Suchanaaaaa/BazarDor-A7)
-
-</div>
-
-<br />
-
-<!-- Screenshot: save a screenshot as public/screenshot.png, then remove this comment and uncomment the line below
-<p align="center"><img src="public/screenshot.png" alt="BazarDor screenshot" width="90%" /></p>
--->
-
-## 📑 Table of Contents
-
-- [About the Project](#-about-the-project)
-- [Technologies Used](#-technologies-used)
-- [Key Features](#-key-features)
-- [Getting Started](#-getting-started)
-- [Deployment](#-deployment)
-- [Project Structure](#-project-structure)
-- [Author](#-author)
-
----
-
-## 📖 About the Project
-
-**BazarDor (বাজার দর)** is a Bengali-language web app for checking the daily prices of everyday essentials such as rice, lentils, oil, vegetables, fish, meat, eggs, milk and spices. It shows which products got more expensive or cheaper today and gives signed-in users a detailed price breakdown with minimum, maximum, average and market-wise prices.
-
----
-
-## 🧰 Technologies Used
-
-<div align="center">
-
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Better Auth](https://img.shields.io/badge/Better_Auth-FF6B35?style=for-the-badge)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-
-</div>
-
-| Layer | Technology | Purpose |
-|:------|:-----------|:--------|
-| 🖥️ Framework | Next.js (App Router) | Routing, server rendering, API routes |
-| 🎨 UI | React + Tailwind CSS v4 | Responsive, clean interface |
-| 📘 Language | TypeScript | Type-safe code |
-| 🔐 Auth | Better Auth | Email/Password, Google and GitHub login |
-| 🗄️ Database | MongoDB Atlas | Stores users and sessions |
-| 🔔 Feedback | react-hot-toast | Success and error messages |
-| ☁️ Hosting | Vercel | Deployment |
-
----
+BazarDor is a web-based market price tracking application designed to help users explore daily prices of essential commodities in Bangladesh. It provides product-wise price information, category-based browsing, market price comparisons, and daily price change indicators to help users understand market trends more easily.
 
 ## ✨ Key Features
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>📈 1. Live Price Ticker</h3>
-      A scrolling strip shows every product's current price with its percentage change (▲ / ▼). It pauses on hover, and the header shows today's date in Bengali.
-    </td>
-    <td width="50%" valign="top">
-      <h3>🔺🔽 2. Today's Price Movers</h3>
-      The home page highlights the <b>top 6 products that got more expensive</b> and the <b>top 6 that got cheaper</b>, followed by a grid of all products with Bengali digits.
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🗂️ 3. Category Browsing + Sorting</h3>
-      Browse products by category and sort them by default order, <b>price low → high</b> or <b>price high → low</b>.
-    </td>
-    <td width="50%" valign="top">
-      <h3>🔒 4. Protected Product Details</h3>
-      Every product page shows <b>min / max / average</b> price and a <b>market-wise price table</b>. Visitors who are not signed in are redirected to the sign-in page.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" valign="top">
-      <h3>🔐 5. Authentication & Profile</h3>
-      Sign up and sign in with <b>Email/Password, Google or GitHub</b>. Signed-in users can view their profile and update their name.
-    </td>
-  </tr>
-</table>
+1. **Daily Market Price Tracking** — View the latest available prices of essential commodities, including their current prices and average market prices.
 
----
+2. **Category-Based Browsing** — Explore products through different categories such as rice, lentils, vegetables, fish, meat, and other daily necessities.
+
+3. **Product Details** — View detailed information about each product, including its unit, description, minimum price, maximum price, and average price.
+
+4. **Price Change Indicators** — Identify whether a product's price has increased, decreased, or remained unchanged compared with the previous day's price.
+
+5. **Market-Wise Price Comparison** — Compare minimum, maximum, and average prices across different markets and locations.
+
+6. **User Authentication** — Access protected features through user authentication and session management.
+
+7. **Responsive User Interface** — Use the application on desktop, tablet, and mobile devices with a responsive layout.
+
+## 🛠️ Technologies Used
+
+- **Next.js** — React framework for building the web application.
+- **React** — Component-based user interface development.
+- **TypeScript** — Type-safe application development.
+- **Tailwind CSS** — Utility-first styling and responsive layouts.
+- **MongoDB Atlas** — Cloud database service.
+- **Better Auth** — User authentication and session management.
+- **REST API** — Retrieving product, category, and market price data.
+- **Git & GitHub** — Version control and source code management.
+- **Vercel** — Application deployment and hosting.
 
 ## 🚀 Getting Started
 
+Follow these steps to run the project locally.
+
 ### Prerequisites
 
-- Node.js 20 or newer
-- A MongoDB Atlas database
+Make sure you have installed:
+
+- Node.js
+- npm
+- Git
 
 ### Installation
 
+**1. Clone the repository**
+
 ```bash
-# 1. Clone the repository
 git clone https://github.com/Suchanaaaaa/BazarDor-A7.git
+```
+
+**2. Navigate to the project directory**
+
+```bash
 cd BazarDor-A7
+```
 
-# 2. Install dependencies
+**3. Install dependencies**
+
+```bash
 npm install
+```
 
-# 3. Start the development server
+**4. Configure environment variables**
+
+Create a `.env.local` file in the project root and add the required environment variables:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+MONGODB_DB=bazardor
+BETTER_AUTH_SECRET=your_authentication_secret
+BETTER_AUTH_URL=http://localhost:3000
+API_BASE=your_api_base_url
+```
+
+Replace the placeholder values with your actual configuration. Use `API_BASE` only if your project requires a custom API base URL.
+
+**5. Start the development server**
+
+```bash
 npm run dev
 ```
 
-### Environment Variables
+**6. Open the application**
 
-Create a `.env.local` file in the project root:
-
-```env
-MONGODB_URI="your-mongodb-connection-string"
-MONGODB_DB="bazardor"
-BETTER_AUTH_SECRET="a-long-random-secret"
-BETTER_AUTH_URL="http://localhost:3000"
-
-# Optional: enables Google / GitHub login
-GOOGLE_CLIENT_ID=""
-GOOGLE_CLIENT_SECRET=""
-GITHUB_CLIENT_ID=""
-GITHUB_CLIENT_SECRET=""
-```
-
-Generate a secret:
-
-```bash
-node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
-```
-
-Then open **http://localhost:3000**.
-
----
-
-## ☁️ Deployment
-
-1. Import the repository into **Vercel**.
-2. Add the environment variables in **Settings → Environment Variables** and set `BETTER_AUTH_URL` to your live domain.
-3. In MongoDB Atlas, go to **Network Access** and allow `0.0.0.0/0` so Vercel can connect.
-4. **Redeploy** the project.
-
-> 🔑 For social login, set the callback URLs to
-> `{BETTER_AUTH_URL}/api/auth/callback/google` and `{BETTER_AUTH_URL}/api/auth/callback/github`.
-
----
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 📁 Project Structure
 
 ```text
 BazarDor-A7/
-├── app/
-│   ├── api/auth/[...all]/   # Better Auth handler
-│   ├── category/[slug]/     # Category page + sorting
-│   ├── product/[slug]/      # Protected product details
-│   ├── profile/             # Profile + update name
-│   ├── signin/ · signup/    # Authentication pages
-│   └── page.tsx             # Home page
-├── components/              # Navbar, Ticker, ProductCard, forms, skeletons
-├── lib/                     # Auth, data fetching, session, formatters
-└── public/                  # Images and logo
+├── app/                  # Application pages and API routes
+├── components/           # Reusable UI components
+├── lib/                  # Data handling, formatting, and utilities
+├── public/                # Static assets
+├── .env.local             # Local environment variables
+├── .gitignore             # Git ignored files
+├── package.json           # Dependencies and scripts
+├── tailwind.config.ts     # Tailwind CSS configuration (if present)
+└── README.md              # Project documentation
 ```
+
+## 🌐 Deployment
+
+The application can be deployed using Vercel.
+
+1. Import the GitHub repository into Vercel.
+2. Configure the required environment variables in the Vercel project settings.
+3. Deploy the application.
+4. Open the generated production URL to access the live application.
+
+**GitHub Repository:** [Suchanaaaaa/BazarDor-A7](https://github.com/Suchanaaaaa/BazarDor-A7)
+
+**Live Website:** Add your deployed Vercel URL here.
+
+## 🎯 Project Objective
+
+The main objective of BazarDor is to make market price information easier to access and understand. By presenting product prices, category information, market comparisons, and price change indicators in one place, the application helps users stay informed about the prices of everyday essentials in Bangladesh.
 
 ---
 
-## 👩‍💻 Author
+**Developed as a web development project — BazarDor (বাজার দর).**
 
-**Suchanaaaaa**
-[![GitHub](https://img.shields.io/badge/GitHub-Suchanaaaaa-181717?style=flat-square&logo=github)](https://github.com/Suchanaaaaa)
-
-<div align="center">
-
-⭐ If you like this project, give it a star!
-
-</div>
