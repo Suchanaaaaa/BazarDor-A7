@@ -114,7 +114,7 @@ The application can be deployed using Vercel.
 
 **GitHub Repository:** [Suchanaaaaa/BazarDor-A7](https://github.com/Suchanaaaaa/BazarDor-A7)
 
-**Live Website:** Add your deployed Vercel URL here.
+**Live Website:** https://bazar-dor-a7-five.vercel.app/
 
 ## 🎯 Project Objective
 
