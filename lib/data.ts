@@ -27,20 +27,37 @@ export type Product = {
 };
 
 /* ---------- fetch with fallback base ---------- */
+
 async function api(path: string): Promise<any> {
   let lastErr: unknown;
+
   for (const base of BASES) {
     try {
-      const res = await fetch(base + path, { next: { revalidate: 60 } });
-      if (!res.ok) {
-        if (res.status === 404) return null;
-        throw new Error(`HTTP ${res.status}`);
+      const res = await fetch(base + path, {
+        next: { revalidate: 60 },
+      });
+
+      if (res.status === 404) {
+        lastErr = new Error(`HTTP 404: ${base + path}`);
+        continue;
       }
+
+      if (res.status === 429) {
+        lastErr = new Error(`HTTP 429 rate limit: ${base}`);
+        continue;
+      }
+
+      if (!res.ok) {
+        lastErr = new Error(`HTTP ${res.status}: ${base}`);
+        continue;
+      }
+
       return await res.json();
     } catch (e) {
       lastErr = e;
     }
   }
+
   throw lastErr ?? new Error("API unreachable");
 }
 

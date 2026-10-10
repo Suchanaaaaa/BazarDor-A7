@@ -12,13 +12,22 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const p = await getProduct(slug);
   if (!p) notFound();
 
-  const unitShort = p.unit.replace("প্রতি ", "");
-  const diff = Math.round(Math.abs(p.price - p.previous));
-  const note = p.description || (p.change > 0
-    ? `গতকালের তুলনায় আজ দাম বেড়েছে · ${bnPrice(diff)} টাকা`
+  
+const unitShort = p.unit.replace("প্রতি ", "");
+const changePercent = Math.abs(p.change);
+
+const formattedChange = changePercent.toLocaleString("bn-BD", {
+  maximumFractionDigits: 1,
+});
+
+const note = p.description || (
+  p.change > 0
+    ? `গতকালের তুলনায় আজ দাম বেড়েছে · ${formattedChange}%`
     : p.change < 0
-      ? `গতকালের তুলনায় আজ দাম কমেছে · ${bnPrice(diff)} টাকা`
-      : "গতকালের তুলনায় দাম অপরিবর্তিত");
+      ? `গতকালের তুলনায় আজ দাম কমেছে · ${formattedChange}%`
+      : "গতকালের তুলনায় দাম অপরিবর্তিত"
+);
+
 
   const tone = p.change > 0 ? "text-error" : p.change < 0 ? "text-success" : "";
 
