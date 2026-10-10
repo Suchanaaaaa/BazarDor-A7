@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="public/logo-icon.png" alt="BazarDor logo" width="72" />
-
 # 🛒 বাজার দর · BazarDor
 
 ### আজকের বাজারের দাম এক নজরে
@@ -35,11 +33,7 @@
 
 ## 📖 About the Project
 
-**BazarDor (বাজার দর)** is a Bengali-language web app that helps people check the latest prices of daily essentials before going to the market: rice, lentils, oil, vegetables, fish, meat, eggs, milk and spices.
-
-It shows which products became **more expensive** or **cheaper** today, lets you browse by category, and gives signed-in users a detailed price breakdown with **minimum, maximum, average and market-wise prices**.
-
-> 🎯 **Goal:** make daily market prices simple, transparent and easy to read for everyone.
+**BazarDor (বাজার দর)** is a Bengali-language web app for checking the daily prices of everyday essentials such as rice, lentils, oil, vegetables, fish, meat, eggs, milk and spices. It shows which products got more expensive or cheaper today and gives signed-in users a detailed price breakdown with minimum, maximum, average and market-wise prices.
 
 ---
 
@@ -65,7 +59,6 @@ It shows which products became **more expensive** or **cheaper** today, lets you
 | 🔐 Auth | Better Auth | Email/Password, Google and GitHub login |
 | 🗄️ Database | MongoDB Atlas | Stores users and sessions |
 | 🔔 Feedback | react-hot-toast | Success and error messages |
-| 🔤 Font | Hind Siliguri | Clear Bengali typography |
 | ☁️ Hosting | Vercel | Deployment |
 
 ---
@@ -100,8 +93,6 @@ It shows which products became **more expensive** or **cheaper** today, lets you
     </td>
   </tr>
 </table>
-
-> ➕ **Also included:** skeleton loading states, a custom 404 page and a fully responsive layout for mobile, tablet and desktop.
 
 ---
 
