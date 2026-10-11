@@ -67,11 +67,11 @@ export const auth = betterAuth({
   socialProviders: social,
 
   account: {
-    accountLinking: {
-      enabled: true,
-      trustedProviders: ["google"],
-    },
+  accountLinking: {
+    enabled: true,
+    trustedProviders: ["google", "github", "email-password"],
   },
+},
 
   plugins: [nextCookies()],
 });
