@@ -70,6 +70,7 @@ export const auth = betterAuth({
   accountLinking: {
     enabled: true,
     trustedProviders: ["google", "github", "email-password"],
+     requireLocalEmailVerified: false,
   },
 },
 
