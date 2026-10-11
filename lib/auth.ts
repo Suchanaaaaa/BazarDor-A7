@@ -22,10 +22,16 @@ if (process.env.NODE_ENV !== "production") {
   g._mongo = client;
 }
 
-const social: Record<
-  string,
-  { clientId: string; clientSecret: string }
-> = {};
+const social: {
+  google?: {
+    clientId: string;
+    clientSecret: string;
+  };
+  github?: {
+    clientId: string;
+    clientSecret: string;
+  };
+} = {};
 
 if (
   process.env.GOOGLE_CLIENT_ID &&
@@ -59,6 +65,13 @@ export const auth = betterAuth({
   },
 
   socialProviders: social,
+
+  account: {
+    accountLinking: {
+      enabled: true,
+      trustedProviders: ["google"],
+    },
+  },
 
   plugins: [nextCookies()],
 });
